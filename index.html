@@ -28,16 +28,16 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body data-spy="scroll" data-target=".navbar">
 
 <!-- Navigation -->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
     <div class="container">
-        <div class="navbar-header">
+        <div class="navbar-header nav">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-lg fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
+            <a class="navbar-brand page-scroll" href="#intro">
                 <i class="fa fa-male"></i>  <span class="light">CODE</span>DESIGN
             </a>
         </div>
@@ -45,10 +45,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
-                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section
                 <li class="hidden">
                     <a href="#page-top"></a>
-                </li>
+                </li> -->
                 <li>
                     <a class="page-scroll" href="#about">About</a>
                 </li>
@@ -66,16 +66,15 @@
 </nav>
 
 <!-- Intro Header -->
-<header class="intro">
+<header class="intro" id="intro">
     <div class="intro-body">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">Basic Element</h1>
-                    <p class="intro-text">A free, responsive, one page HTML theme.<br>Created by <a href="http://codedesign.elkind.net/themes/basicelement/">CODEDESIGN</a></p>
-                    <a href="#about" class="btn btn-down page-scroll">
-                        <i class="fa fa-angle-down animated"></i>
-                    </a>
+                    <p class="intro-text">A free, responsive, one page HTML theme.<br>Created by 
+					<a href="http://codedesign.elkind.net/themes/basicelement/">CODEDESIGN</a></p>
+					<p class="nav"><a href="#about" class=" btn btn-down page-scroll"><i class="fa fa-angle-down animated"></i></a></p>
                 </div>
             </div>
         </div>
@@ -165,6 +164,7 @@
 <script src="js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
+<script src="http://flesler-plugins.googlecode.com/files/jquery.scrollTo-1.4.3.1-min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 
 <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->

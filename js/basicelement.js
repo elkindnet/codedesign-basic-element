@@ -13,17 +13,36 @@ $(window).scroll(function() {
     }
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+	
+	// inizialize bookmark
+	var current = window.location.hash ? window.location.hash : '#home';
+	$('.nav a[href=' + current + ']').parent().addClass('active');
+	
+	// click and go
+	$('.nav a').click(function(e){
+		e.preventDefault();
+		var current = $(this).attr('href');
+		$.scrollTo(current, 1000, {
+			easing: 'easeInOutCubic',
+			onAfter: function(){
+				location.hash = current;
+			}
+		})
+	})
+	
+	// resize stuff
+	$(window).resize(function(){
+		$('[data-spy="scroll"]').each(function () {
+			var $spy = $(this).scrollspy('refresh');
+		});
+		var current = $('.nav li.active a').attr('href');
+		$.scrollTo(current, 1000, { easing: 'easeInOutCubic' });
+		location.hash = current;
+	})
+		
 });
+
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
